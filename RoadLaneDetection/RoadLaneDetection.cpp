@@ -10,7 +10,7 @@ using namespace cv;
 
 Mat RoadLaneDetector::filter_colors(Mat img_frame) {
 	/*
-		흰색/노란색 차선을 필터링한다.
+		흰색/노란색 색상의 범위를 정해 해당되는 차선을 필터링한다.
 	*/
 	Mat output;
 	UMat img_hsv, img_combine;
@@ -106,7 +106,7 @@ vector<vector<Vec4i>> RoadLaneDetector::separateLine(Mat img_edges, vector<Vec4i
 		}
 	}
 
-	//선들을 좌우 선으로 분리
+	//선들을 좌우 선으로 분류
 	img_center = static_cast<double>((img_edges.cols / 2));
 	for (int i = 0; i < selected_lines.size(); i++) {
 		ini = Point(selected_lines[i][0], selected_lines[i][1]);
@@ -195,7 +195,7 @@ vector<Point> RoadLaneDetector::regression(vector<vector<Vec4i>> separatedLines,
 string RoadLaneDetector::predictDir() {
 	/*
 		두 차선이 교차하는 지점(사라지는 점)이 중심점으로부터
-		왼쪽에 있는지 오른쪽에 있는지로 진행방향 판단한다.
+		왼쪽에 있는지 오른쪽에 있는지로 진행방향을 예측한다.
 	*/
 	
 	string output;
