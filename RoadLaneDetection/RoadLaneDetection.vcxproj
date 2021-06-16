@@ -147,7 +147,6 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="RoadLaneDetection.cpp" />
-    <ClCompile Include="RoadLaneDetector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RoadLaneDetector.h" />

@@ -4,7 +4,6 @@
 #include <vector>
 #include "opencv2/opencv.hpp"
 #include "RoadLaneDetector.h"
-#include "RoadLaneDetector.cpp"
 
 int main()
 {

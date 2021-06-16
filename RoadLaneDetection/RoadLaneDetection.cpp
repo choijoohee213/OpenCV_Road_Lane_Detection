@@ -5,8 +5,6 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-using namespace cv;
 
 Mat RoadLaneDetector::filter_colors(Mat img_frame) {
 	/*

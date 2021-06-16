@@ -30,6 +30,5 @@ public:
 	vector<Point> regression(vector<vector<Vec4i> > separated_lines, Mat img_input);
 	string predictDir();
 	Mat drawLine(Mat img_input, vector<Point> lane, string dir);
-
 };
 
