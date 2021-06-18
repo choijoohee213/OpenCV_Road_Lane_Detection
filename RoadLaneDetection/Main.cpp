@@ -74,7 +74,7 @@ int main()
 		
 		//10. 결과를 동영상 파일로 저장. 캡쳐하여 사진 저장
 		writer << img_result;
-		if (cnt++ == 10) 
+		if (cnt++ == 15) 
 			imwrite("img_result.jpg", img_result);  //캡쳐하여 사진 저장
 
 		//11. 결과 영상 출력
