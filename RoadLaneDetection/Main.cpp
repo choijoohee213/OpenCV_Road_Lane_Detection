@@ -62,7 +62,7 @@ int main()
 		if (lines.size() > 0) {
 			//7. 추출한 직선성분으로 좌우 차선에 있을 가능성이 있는 직선들만 따로 뽑아서 좌우 각각 직선을 계산한다. 
 			// 선형 회귀를 하여 가장 적합한 선을 찾는다.
-			separated_lines = roadLaneDetector.separateLine(img_edges, lines);
+			separated_lines = roadLaneDetector.separateLine(img_mask, lines);
 			lane = roadLaneDetector.regression(separated_lines, img_frame);
 			
 			//8. 진행 방향 예측
